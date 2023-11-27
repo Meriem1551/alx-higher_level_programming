@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -z "$PYFILE" ];then
+echo "PYFILE undefined!"
+fi
+if [ ! -f "$PYFILE" ];then
+echo "file doesn't existe"
+fi
+python3 "$PYFILE"
