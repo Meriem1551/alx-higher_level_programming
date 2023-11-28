@@ -23,4 +23,5 @@ while (tmp != NULL && number > tmp->n)
 }
 new->next = q->next;
 q->next = new;
+return (new);
 }
