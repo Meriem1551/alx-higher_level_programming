@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+import sys
+from calculator_1 import add, sub, mul, div
 if __name__ == "__main__":
-    import sys
-    from calculator_1 add, sub, mul, div
     num_args = len(sys.argv) - 1
     if num_args != 3:
         print("./100-my_calculator.py <a> <operator> <b>")
