@@ -14,6 +14,3 @@ else:
     print("{:d} arguments:".format(num_args))
     for i in range(1, num_args):
         print(f"{i}: {sys.argv[i]}")
-~                                                                                                                                           
-~                                                                                                                                           
-~                       
