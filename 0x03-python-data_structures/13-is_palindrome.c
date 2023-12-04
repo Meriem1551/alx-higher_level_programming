@@ -9,8 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
-	int num_node = 0;
-        int *t, i, j;
+	int num_node = 0, *t, i = 0, j = 0;
 
 	if (*head == NULL)
 		return (1);
@@ -22,7 +21,6 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 	t = (int *)malloc(sizeof(int) * num_node);
-	i = 0;
 	tmp = *head;
 	while (i != num_node)
 	{
@@ -30,15 +28,14 @@ int is_palindrome(listint_t **head)
 		i++;
 		tmp = tmp->next;
 	}
-	j = num_node - 1;
-	i = 0;
-	while(i != num_node/2)
+	i--;
+	while(j != num_node/2)
 	{
-		if (t[i] != t[j])
+		if (t[j] != t[i])
 			return (0);
 
-		i++;
-		j--;
+		j++;
+		i--;
 	}
 	return (1);
 }
